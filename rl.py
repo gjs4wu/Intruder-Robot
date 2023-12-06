@@ -51,7 +51,6 @@ class AI2ThorEnv(gym.Env):
             []
         )  # All object_id seen by the agent for the current environment
         self.last_observations = None
-        self.last_distance = 0
         self.prev_positions: list[list[float]] = []  # 50 previous positions
         self.prev_angles: list[float] = []  # 50 previous angles
         self.visited_positions: set[
@@ -63,13 +62,11 @@ class AI2ThorEnv(gym.Env):
         self.env_id = 0
         self.collisions = 0
 
-        self.action_space = Discrete(
-            3
-        )  # 3 possible actions: Move forward, rotate right, rotate left
+        self.action_space = Discrete(6)  # 6 possible actions
         self.observation_space = Box(  # Observation space contains 303 floats:
             low=-inf,  #       Current robot position [x, z]
             high=inf,  #       Current robot rotation [y]
-            shape=(305, 1),  #       100 random reachable positions [x,z]
+            shape=(303, 1),  #       100 random reachable positions [x,z]
             dtype=np.float32,  #       50 previous robot positions [x,z]
         )
 
@@ -81,12 +78,12 @@ class AI2ThorEnv(gym.Env):
         # Perform action
         if action == 0:
             ev = self.robots[0].moveAhead()
-        # elif action == 1:
-        #     ev = self.robots[0].moveBack()
-        # elif action == 2:
-        #     ev = self.robots[0].moveRight()
-        # elif action == 3:
-        #     ev = self.robots[0].moveLeft()
+        elif action == 1:
+            ev = self.robots[0].moveBack()
+        elif action == 2:
+            ev = self.robots[0].moveRight()
+        elif action == 3:
+            ev = self.robots[0].moveLeft()
         elif action == 1:
             ev = self.robots[0].rotateRight()
         elif action == 2:
@@ -130,20 +127,11 @@ class AI2ThorEnv(gym.Env):
             reward = 300
             done = True
         else:
-            distance = dist(
-                list(self.robots[0].position.values()),
-                list(self.intruder.position.values()),
-            )
+            reward = 0
 
             if action == 0 and has_error(ev):
                 reward = -10
             else:
-                reward = (
-                    0
-                    if self.last_distance - distance <= 0
-                    else (self.last_distance - distance) * 50
-                )
-
                 stdev = np.std(self.prev_positions, axis=0)
                 reward += 7.5 * (stdev[0] + stdev[1]) - 2.5
                 ang_std = angular_std_dev(self.prev_angles)
@@ -155,23 +143,20 @@ class AI2ThorEnv(gym.Env):
                 if action == 0 and close_to_wall(ev):
                     reward -= 10
                 reward -= 1
-            self.last_distance = distance
 
         observations = (
             [
                 self.robots[0].position["x"],
                 self.robots[0].position["z"],
                 self.robots[0].rotation["y"],
-                self.intruder.position["x"],
-                self.intruder.position["y"],
             ]
             + [i for j in [[i[0], i[2]] for i in self.reachable_positions] for i in j]
             + [i for j in self.prev_positions for i in j]
         )
 
-        if len(observations) < 305:
+        if len(observations) < 303:
             observations += [*self.prev_positions[-1]] * int(
-                (305 - len(observations)) / 2
+                (303 - len(observations)) / 2
             )
 
         self.last_observations = observations
@@ -225,8 +210,6 @@ class AI2ThorEnv(gym.Env):
                 self.robots[0].position["x"],
                 self.robots[0].position["z"],
                 self.robots[0].rotation["y"],
-                self.intruder.position["x"],
-                self.intruder.position["y"],
             ]
             + [i for j in [[i[0], i[2]] for i in self.reachable_positions] for i in j]
             + [self.robots[0].position["x"], self.robots[0].position["z"]] * 50
@@ -238,10 +221,6 @@ class AI2ThorEnv(gym.Env):
         )
 
         self.last_observations = observations
-        self.last_distance = dist(
-            list(self.robots[0].position.values()),
-            list(self.intruder.position.values()),
-        )
         self.visited_positions = set()
         self.prev_positions = []
         self.prev_angles = []
