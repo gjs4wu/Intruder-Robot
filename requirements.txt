@@ -1,0 +1,6 @@
+ai2thor
+matplotlib
+pillow
+ray[rllib]==2.5.1
+gymnasium
+torch

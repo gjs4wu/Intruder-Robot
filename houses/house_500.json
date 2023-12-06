@@ -1,0 +1,728 @@
+{
+    "doors": [
+        {
+            "assetId": "Doorway_9",
+            "id": "door|1|2",
+            "openable": false,
+            "openness": 0,
+            "room0": "room|2",
+            "room1": "room|2",
+            "wall0": "wall|2|2.12|0.00|8.46|0.00",
+            "wall1": "wall|exterior|2.12|0.00|8.46|0.00",
+            "holePolygon": [
+                {
+                    "x": 4.055271851298301,
+                    "y": 0,
+                    "z": 0
+                },
+                {
+                    "x": 5.053295718905417,
+                    "y": 2.0743770599365234,
+                    "z": 0
+                }
+            ],
+            "assetPosition": {
+                "x": 4.554924820949225,
+                "y": 1.0371885299682617,
+                "z": 0
+            }
+        }
+    ],
+    "metadata": {
+        "agent": {
+            "horizon": 30,
+            "position": {
+                "x": 4.0,
+                "y": 0.95,
+                "z": 4.75
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180,
+                "z": 0
+            },
+            "standing": true
+        },
+        "roomSpecId": "bathroom",
+        "schema": "1.0.0",
+        "warnings": {},
+        "agentPoses": {
+            "arm": {
+                "horizon": 30,
+                "position": {
+                    "x": 4.0,
+                    "y": 0.95,
+                    "z": 4.75
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 180,
+                    "z": 0
+                },
+                "standing": true
+            },
+            "default": {
+                "horizon": 30,
+                "position": {
+                    "x": 4.0,
+                    "y": 0.95,
+                    "z": 4.75
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 180,
+                    "z": 0
+                },
+                "standing": true
+            },
+            "locobot": {
+                "horizon": 30,
+                "position": {
+                    "x": 4.0,
+                    "y": 0.95,
+                    "z": 4.75
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 180,
+                    "z": 0
+                }
+            },
+            "stretch": {
+                "horizon": 30,
+                "position": {
+                    "x": 4.0,
+                    "y": 0.95,
+                    "z": 4.75
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 180,
+                    "z": 0
+                },
+                "standing": true
+            }
+        }
+    },
+    "objects": [
+        {
+            "assetId": "Toilet_1",
+            "children": [
+                {
+                    "assetId": "Cloth_9",
+                    "id": "Cloth|surface|2|0",
+                    "kinematic": false,
+                    "position": {
+                        "x": 8.097299575805664,
+                        "y": 1.0555773973464966,
+                        "z": 8.289264678955078
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0001678466797,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "assetId": "Spray_Bottle_2",
+                    "id": "SprayBottle|surface|2|1",
+                    "kinematic": false,
+                    "position": {
+                        "x": 8.365689277648926,
+                        "y": 1.167252779006958,
+                        "z": 8.314284324645996
+                    },
+                    "rotation": {
+                        "x": 0.0,
+                        "y": 180.0001678466797,
+                        "z": 0.0
+                    }
+                }
+            ],
+            "id": "Toilet|2|0",
+            "kinematic": true,
+            "position": {
+                "x": 8.17225795340538,
+                "y": 0.5189565420150757,
+                "z": 7.950566374778747
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180,
+                "z": 0
+            },
+            "material": null
+        },
+        {
+            "assetId": "Sink_26",
+            "children": [
+                {
+                    "assetId": "Bathroom_Faucet_30",
+                    "id": "Faucet|2|1|1",
+                    "kinematic": true,
+                    "position": {
+                        "x": 0.16089780509471885,
+                        "y": 1.1324992626905441,
+                        "z": 8.019541972398757
+                    },
+                    "rotation": {
+                        "x": 0,
+                        "y": 90.0,
+                        "z": 0
+                    }
+                }
+            ],
+            "id": "Sink|2|1|0",
+            "kinematic": true,
+            "position": {
+                "x": 0.3461714029312134,
+                "y": 0.4927992820739746,
+                "z": 8.019541972398757
+            },
+            "rotation": {
+                "x": 0,
+                "y": 90.0,
+                "z": 0
+            },
+            "material": null
+        },
+        {
+            "assetId": "Laundry_Hamper_1_3",
+            "id": "LaundryHamper|2|2",
+            "kinematic": false,
+            "position": {
+                "x": 5.1448360790035395,
+                "y": 0.4418313503265381,
+                "z": 8.181637548923492
+            },
+            "rotation": {
+                "x": 0,
+                "y": 180,
+                "z": 0
+            },
+            "material": null
+        },
+        {
+            "assetId": "Plunger_3",
+            "id": "Plunger|2|3",
+            "kinematic": false,
+            "position": {
+                "x": 0.0991485059261322,
+                "y": 0.2696691155433655,
+                "z": 2.2140032196044923
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "material": null
+        },
+        {
+            "assetId": "bin_23",
+            "id": "GarbageCan|2|4",
+            "kinematic": false,
+            "position": {
+                "x": 6.179013600790948,
+                "y": 0.32797718048095703,
+                "z": 0.21047767400741577
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "material": null
+        },
+        {
+            "assetId": "Wall_Decor_Photo_1V",
+            "id": "Painting|2|5",
+            "kinematic": true,
+            "position": {
+                "x": 2.135870485454798,
+                "y": 1.3900149264147759,
+                "z": 0.6456427883634064
+            },
+            "rotation": {
+                "x": 0,
+                "y": 90,
+                "z": 0
+            },
+            "material": null
+        },
+        {
+            "assetId": "Wall_Decor_Painting_1V",
+            "id": "Painting|2|6",
+            "kinematic": true,
+            "position": {
+                "x": 5.0903318816824115,
+                "y": 1.2570090707793207,
+                "z": 0.020870485454797746
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "material": null
+        }
+    ],
+    "proceduralParameters": {
+        "ceilingMaterial": {
+            "name": "bathroomTilesTan2"
+        },
+        "floorColliderThickness": 1.0,
+        "lights": [
+            {
+                "id": "DirectionalLight",
+                "indirectMultiplier": 1.0,
+                "intensity": 1,
+                "position": {
+                    "x": 0.84,
+                    "y": 0.1855,
+                    "z": -1.09
+                },
+                "rgb": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "rotation": {
+                    "x": 66,
+                    "y": 75,
+                    "z": 0
+                },
+                "shadow": {
+                    "type": "Soft",
+                    "strength": 1,
+                    "normalBias": 0,
+                    "bias": 0,
+                    "nearPlane": 0.2,
+                    "resolution": "FromQualitySettings"
+                },
+                "type": "directional"
+            },
+            {
+                "id": "light_2",
+                "intensity": 0.45,
+                "position": {
+                    "x": 4.442460007563582,
+                    "y": 2.3973601006435916,
+                    "z": 4.442460007563583
+                },
+                "range": 15,
+                "rgb": {
+                    "r": 1.0,
+                    "g": 0.855,
+                    "b": 0.722
+                },
+                "shadow": {
+                    "type": "Soft",
+                    "strength": 1,
+                    "normalBias": 0,
+                    "bias": 0.05,
+                    "nearPlane": 0.2,
+                    "resolution": "FromQualitySettings"
+                },
+                "type": "point"
+            }
+        ],
+        "receptacleHeight": 0.7,
+        "reflections": [],
+        "skyboxId": "SkySFCityHall"
+    },
+    "rooms": [
+        {
+            "ceilings": [],
+            "children": [],
+            "floorMaterial": {
+                "name": "DarkWoodPlanks"
+            },
+            "floorPolygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 2.115
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 8.462
+                },
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 8.462
+                },
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 2.115
+                }
+            ],
+            "id": "room|2",
+            "roomType": "Bathroom"
+        }
+    ],
+    "walls": [
+        {
+            "id": "wall|2|0.00|2.12|0.00|8.46",
+            "material": {
+                "name": "KitchenTiles4"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 2.115
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 8.462
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.597360100643592,
+                    "z": 2.115
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.597360100643592,
+                    "z": 8.462
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|0.00|8.46|8.46|8.46",
+            "material": {
+                "name": "KitchenTiles4"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 8.462
+                },
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 8.462
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.597360100643592,
+                    "z": 8.462
+                },
+                {
+                    "x": 8.462,
+                    "y": 2.597360100643592,
+                    "z": 8.462
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|8.46|0.00|8.46|8.46",
+            "material": {
+                "name": "KitchenTiles4"
+            },
+            "polygon": [
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 8.462
+                },
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 8.462,
+                    "y": 2.597360100643592,
+                    "z": 8.462
+                },
+                {
+                    "x": 8.462,
+                    "y": 2.597360100643592,
+                    "z": 0.0
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|2.12|0.00|8.46|0.00",
+            "material": {
+                "name": "KitchenTiles4"
+            },
+            "polygon": [
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 8.462,
+                    "y": 2.597360100643592,
+                    "z": 0.0
+                },
+                {
+                    "x": 2.115,
+                    "y": 2.597360100643592,
+                    "z": 0.0
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|2.12|0.00|2.12|2.12",
+            "material": {
+                "name": "KitchenTiles4"
+            },
+            "polygon": [
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 2.115
+                },
+                {
+                    "x": 2.115,
+                    "y": 2.597360100643592,
+                    "z": 0.0
+                },
+                {
+                    "x": 2.115,
+                    "y": 2.597360100643592,
+                    "z": 2.115
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|2|0.00|2.12|2.12|2.12",
+            "material": {
+                "name": "KitchenTiles4"
+            },
+            "polygon": [
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 2.115
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 2.115
+                },
+                {
+                    "x": 2.115,
+                    "y": 2.597360100643592,
+                    "z": 2.115
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.597360100643592,
+                    "z": 2.115
+                }
+            ],
+            "roomId": "room|2"
+        },
+        {
+            "id": "wall|exterior|0.00|2.12|0.00|8.46",
+            "material": {
+                "name": "LivingRoomFireplacebrickTex"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 2.597360100643592,
+                    "z": 8.462
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.597360100643592,
+                    "z": 2.115
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 8.462
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 2.115
+                }
+            ],
+            "roomId": "exterior"
+        },
+        {
+            "id": "wall|exterior|2.12|0.00|2.12|2.12",
+            "material": {
+                "name": "LivingRoomFireplacebrickTex"
+            },
+            "polygon": [
+                {
+                    "x": 2.115,
+                    "y": 2.597360100643592,
+                    "z": 2.115
+                },
+                {
+                    "x": 2.115,
+                    "y": 2.597360100643592,
+                    "z": 0.0
+                },
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 2.115
+                },
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "roomId": "exterior"
+        },
+        {
+            "id": "wall|exterior|0.00|8.46|8.46|8.46",
+            "material": {
+                "name": "LivingRoomFireplacebrickTex"
+            },
+            "polygon": [
+                {
+                    "x": 8.462,
+                    "y": 2.597360100643592,
+                    "z": 8.462
+                },
+                {
+                    "x": 0.0,
+                    "y": 2.597360100643592,
+                    "z": 8.462
+                },
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 8.462
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 8.462
+                }
+            ],
+            "roomId": "exterior"
+        },
+        {
+            "id": "wall|exterior|8.46|0.00|8.46|8.46",
+            "material": {
+                "name": "LivingRoomFireplacebrickTex"
+            },
+            "polygon": [
+                {
+                    "x": 8.462,
+                    "y": 2.597360100643592,
+                    "z": 0.0
+                },
+                {
+                    "x": 8.462,
+                    "y": 2.597360100643592,
+                    "z": 8.462
+                },
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 8.462
+                }
+            ],
+            "roomId": "exterior"
+        },
+        {
+            "id": "wall|exterior|0.00|2.12|2.12|2.12",
+            "material": {
+                "name": "LivingRoomFireplacebrickTex"
+            },
+            "polygon": [
+                {
+                    "x": 0.0,
+                    "y": 2.597360100643592,
+                    "z": 2.115
+                },
+                {
+                    "x": 2.115,
+                    "y": 2.597360100643592,
+                    "z": 2.115
+                },
+                {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 2.115
+                },
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 2.115
+                }
+            ],
+            "roomId": "exterior"
+        },
+        {
+            "id": "wall|exterior|2.12|0.00|8.46|0.00",
+            "material": {
+                "name": "LivingRoomFireplacebrickTex"
+            },
+            "polygon": [
+                {
+                    "x": 2.115,
+                    "y": 2.597360100643592,
+                    "z": 0.0
+                },
+                {
+                    "x": 8.462,
+                    "y": 2.597360100643592,
+                    "z": 0.0
+                },
+                {
+                    "x": 2.115,
+                    "y": 0,
+                    "z": 0.0
+                },
+                {
+                    "x": 8.462,
+                    "y": 0,
+                    "z": 0.0
+                }
+            ],
+            "roomId": "exterior"
+        }
+    ],
+    "windows": []
+}
